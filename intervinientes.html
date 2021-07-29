@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intervinientes</title>
+    <link rel="shortcut icon" href="images/icon.ico">
+    <script>
+        var totalCount = 2;
+
+        function ChangeIt() {
+            var num = Math.ceil(Math.random() * totalCount);
+            if (num === 1) {
+                var element = document.createElement("link");
+                element.setAttribute("rel", "stylesheet");
+                element.setAttribute("type", "text/css");
+                element.setAttribute("href", "css/white.css");
+                document.getElementsByTagName("head")[0].appendChild(element);
+            } else if (num === 2) {
+                var element1 = document.createElement("link");
+                element1.setAttribute("rel", "stylesheet");
+                element1.setAttribute("type", "text/css");
+                element1.setAttribute("href", "css/black.css");
+                document.getElementsByTagName("head")[0].appendChild(element1);
+            }
+        }
+
+        ChangeIt();
+    </script>
+</head>
+
+<body onload="showLoader()">
+
+<div id="loader">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<div id="page" class="animation-page">
+    <header>
+        <a href="homepage.html">CC-D+M</a>
+        <nav id="nav-web">
+            <ul>
+                <li><a href="edicao2020.html">Edição 2020</a></li>
+                <li><a href="intervinientes.html">Intervinientes</a></li>
+                <li><a href="locais.html">Locais</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <nav id="nav-mobile" class="dropdown">
+            <div id="nav-mobile-icon">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div id="dropdown-content">
+                <ul>
+                    <li><a href="edicao2020.html">Edição 2020</a></li>
+                    <li><a href="intervinientes.html">Intervinientes</a></li>
+                    <li><a href="locais.html">Locais</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="inter">
+        <h1>intervinientes</h1>
+        <div class="web-main-container">
+            <div class="web-container" id="web-inter1" style="display: flex;">
+                <div class="text-container">
+                    <h2>Filipa Cruz</h2>
+                    <p>Filipa Cruz fez a licenciatura em design e multimédia na faculdade de ciências e
+                        tecnologia da universidade de Coimbra. Depois de terminar a licenciatura, esteve um ano a
+                        trabalhar no DOC no INP como Júnior Designer. Lá as suas funções passavam por criar templates de elementos muito utilizados para que
+                        os elementos visuais fossem coesos e mais tarde esteve a fazer o mesmo trabalho nos elementos de comunicação,
+                        envolvendo por vezes uma parte de project management. Durante esse ano foi esporadicamente adquirindo cursos
+                        de formação mensal na Odd School Lisbon, de Desenho, Z-brush, 3dsMax e Photoshop. Em setembro de 2018 acabou por ingressar no
+                        curso avançado de 1 ano de Modelação e Texturização 3D Avançada na Odd School.
+                        Em dezembro de 2018 viu-se forçada de sair da DOC porque trabalhar 20h semanais mais o
+                        curso da Odd que eram 8h de trabalho na escola mais tpcs tornou-se demasiado e focou-se em estudar.
+                        Em setembro deste ano terminou esse mesmo curso, e no início de novembro começou a
+                        trabalhar em 3D para arquitetura em Lisboa, o que se encontro a fazer até ao momento.</p>
+                </div>
+                <div class="image-container">
+                    <img src="images/filipa-cruz.jpg" alt="filipa-cruz" height="889" width="889"/>
+                </div>
+            </div>
+
+            <div class="web-container" id="web-inter2" style="display: none;">
+                <div class="text-container">
+                    <h2>Adriana Nunes</h2>
+                    <p>Adriana Nunes fez a licenciatura em design e multimédia na Faculdade de Ciências e Tecnologia da
+                        Universidade de Coimbra de 2013 a 2016. Após a licenciatura optou por continuar no
+                        mestrado de design e multimédia também na UC e terminou em 2018 com uma tese sobre sonificação de vídeo.
+                        Apresentou um artigo escrito, baseado na tese, no ART&FACT em Lisboa.
+                        Neste momento encontra-se a trabalhar no Círculo de Artes Plásticas de Coimbra e entre
+                        outras coisas, esta a colaborar com os R2 na identidade do Anozero- Bienal de Arte
+                        Contemporânea de Coimbra. Quando aparece, desenvolve também projetos como freelancer.</p>
+                    </p>
+                </div>
+                <div class="image-container">
+                    <img src="images/adriana-nunes.jpg" alt="filipa-cruz" height="889" width="889"/>
+                </div>
+            </div>
+
+            <div class="web-container" id="web-inter3" style="display: none;">
+                <div class="text-container">
+                    <h2>Diana Ferreira</h2>
+                    <p>Entrou para a licenciatura em design e multimédia na faculdade de ciências e tecnologia
+                        da universidade de Coimbra em 2013 e acabou em 2016.
+                        Depois da licenciatura, mudou-se para o preto onde fez o mestrado em design gráfico de
+                        projetos editoriais da faculdade de belas artes. Como projeto de mestrado desenvolveu uma
+                        proposta de identidade dinâmica para o cinema batalha. E também desenvolveu um tipo de letra,
+                        monitor Display.
+                        Desde 2018 trabalha como freelancer, desenvolvendo projetos focados em design gráfico e
+                        editorial, tipografia e motion. Trabalha também em part-time no jornal de noticias, em
+                        edição de fotografia. Trabalha regularmente com a editora Lovers&Lollypops, criando posters e
+                        vídeos que apresentam os eventos musicais organizados por eles no porto.
+                        Mais recentemente, desenvolveu em colaboração com o Serafim Mendes, a identidade para o
+                        Fórum Internacional de Gaia 2019.</p>
+                </div>
+                <div class="image-container">
+                    <img src="images/diana-ferreira.jpg" alt="filipa-cruz" height="889" width="889"/>
+                </div>
+            </div>
+
+            <div class="main-buttons-container">
+                <div class="buttons-container">
+                    <button class="button" id="web-buttoninter1"
+                            onclick="webbuttonsinter('web-inter1', 'web-buttoninter1');"></button>
+                    <button class="button" id="web-buttoninter2"
+                            onclick="webbuttonsinter('web-inter2', 'web-buttoninter2');"></button>
+                    <button class="button" id="web-buttoninter3"
+                            onclick="webbuttonsinter('web-inter3', 'web-buttoninter3');"></button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="mobile-main-container">
+            <div class="mobile-container" id="mobile-inter1" style="display: block;">
+                <div class="image-container">
+                    <img src="images/filipa-cruz.jpg" alt="filipa-cruz" height="889" width="889"/>
+                </div>
+                <div class="text-container">
+                    <h2>Filipa Cruz</h2>
+                    <p>Filipa Cruz fez a licenciatura em design e multimédia na faculdade de ciências e
+                        tecnologia da universidade de Coimbra. Depois de terminar a licenciatura, esteve um ano a
+                        trabalhar no DOC no INP como Júnior Designer. Lá as suas funções passavam por criar templates de elementos muito utilizados para que
+                        os elementos visuais fossem coesos e mais tarde esteve a fazer o mesmo trabalho nos elementos de comunicação,
+                        envolvendo por vezes uma parte de project management. Durante esse ano foi esporadicamente adquirindo cursos
+                        de formação mensal na Odd School Lisbon, de Desenho, Z-brush, 3dsMax e Photoshop. Em setembro de 2018 acabou por ingressar no
+                        curso avançado de 1 ano de Modelação e Texturização 3D Avançada na Odd School.
+                        Em dezembro de 2018 viu-se forçada de sair da DOC porque trabalhar 20h semanais mais o
+                        curso da Odd que eram 8h de trabalho na escola mais tpcs tornou-se demasiado e focou-se em estudar.
+                        Em setembro deste ano terminou esse mesmo curso, e no início de novembro começou a
+                        trabalhar em 3D para arquitetura em Lisboa, o que se encontro a fazer até ao momento.</p>
+                </div>
+            </div>
+
+            <div class="mobile-container" id="mobile-inter2" style="display: none;">
+                <div class="image-container">
+                    <img src="images/adriana-nunes.jpg" alt="filipa-cruz" height="889" width="889"/>
+                </div>
+                <div class="text-container">
+                    <h2>Adriana Nunes</h2>
+                    <p>Adriana Nunes fez a licenciatura em design e multimédia na Faculdade de Ciências e Tecnologia da
+                        Universidade de Coimbra de 2013 a 2016. Após a licenciatura optou por continuar no
+                        mestrado de design e multimédia também na UC e terminou em 2018 com uma tese sobre sonificação de vídeo.
+                        Apresentou um artigo escrito, baseado na tese, no ART&FACT em Lisboa.
+                        Neste momento encontra-se a trabalhar no Círculo de Artes Plásticas de Coimbra e entre
+                        outras coisas, esta a colaborar com os R2 na identidade do Anozero- Bienal de Arte
+                        Contemporânea de Coimbra. Quando aparece, desenvolve também projetos como freelancer.</p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mobile-container" id="mobile-inter3" style="display: none;">
+                <div class="image-container">
+                    <img src="images/diana-ferreira.jpg" alt="filipa-cruz" height="889" width="889"/>
+                </div>
+                <div class="text-container">
+                    <h2>Diana Ferreira</h2>
+                    <p>Entrou para a licenciatura em design e multimédia na faculdade de ciências e tecnologia
+                        da universidade de Coimbra em 2013 e acabou em 2016.
+                        Depois da licenciatura, mudou-se para o preto onde fez o mestrado em design gráfico de
+                        projetos editoriais da faculdade de belas artes. Como projeto de mestrado desenvolveu uma
+                        proposta de identidade dinâmica para o cinema batalha. E também desenvolveu um tipo de letra,
+                        monitor Display.
+                        Desde 2018 trabalha como freelancer, desenvolvendo projetos focados em design gráfico e
+                        editorial, tipografia e motion. Trabalha também em part-time no jornal de noticias, em
+                        edição de fotografia. Trabalha regularmente com a editora Lovers&Lollypops, criando posters e
+                        vídeos que apresentam os eventos musicais organizados por eles no porto.
+                        Mais recentemente, desenvolveu em colaboração com o Serafim Mendes, a identidade para o
+                        Fórum Internacional de Gaia 2019.</p>
+                </div>
+            </div>
+
+            <div class="main-buttons-container">
+                <div class="buttons-container">
+                    <button class="button" id="mobile-buttoninter1"
+                            onclick="mobilebuttonsinter('mobile-inter1', 'mobile-buttoninter1');"></button>
+                    <button class="button" id="mobile-buttoninter2"
+                            onclick="mobilebuttonsinter('mobile-inter2', 'mobile-buttoninter2');"></button>
+                    <button class="button" id="mobile-buttoninter3"
+                            onclick="mobilebuttonsinter('mobile-inter3', 'mobile-buttoninter3');"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="icons-black">
+            <a class="facebook-icon" href="#">
+                <img src="images/facebook-icon-black.png" alt="facebook-icon" height="40" width="40"/>
+            </a>
+            <a class="instagram-icon" href="#">
+                <img src="images/instagram-icon-black.png" alt="instagram-icon" height="41" width="41"/>
+            </a>
+        </div>
+        <div id="icons-white">
+            <a class="facebook-icon" href="#">
+                <img src="images/facebook-icon-white.png" alt="instagram-icon" height="40" width="40"/>
+            </a>
+            <a class="instagram-icon" href="#">
+                <img src="images/instagram-icon-white.png" alt="instagram-icon" height="41" width="41"/>
+            </a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    let myVar;
+
+    if (sessionStorage.getItem("first_load")) {
+        console.log('User has not finished session');
+        showPage();
+    } else {
+        showLoader();
+        sessionStorage.setItem("first_load", true);
+    }
+
+    function showPage() {
+        let loader = document.getElementById("loader");
+        let page = document.getElementById("page");
+        loader.style.display = "none";
+        page.style.display = "block";
+    }
+
+    function showLoader() {
+        myVar = setTimeout(showPage, 3000);
+    }
+
+
+    function webbuttonsinter(id, buttonid) {
+        var id_temp;
+        var buttonid_temp;
+        for (var i = 0; i < 3; i++) {
+            var c = document.getElementsByClassName("web-container")[i];
+            if (c.style.display === "flex") {
+                id_temp = c.id;
+            }
+        }
+        if (id_temp === "web-inter1") buttonid_temp = "web-buttoninter1";
+        else if (id_temp === "web-inter2") buttonid_temp = "web-buttoninter2";
+        else if (id_temp === "web-inter3") buttonid_temp = "web-buttoninter3";
+        var activeInter = document.getElementById(id);
+        if (activeInter.style.display === "none") {
+            var previousInter = document.getElementById(id_temp);
+            previousInter.style.display = "none";
+            activeInter.style.display = "flex";
+        }
+    }
+
+
+
+    function mobilebuttonsinter(id, buttonid) {
+        var id_temp;
+        var buttonid_temp;
+        for (var i = 0; i < 3; i++) {
+            var c = document.getElementsByClassName("mobile-container")[i];
+            if (c.style.display === "block") {
+                id_temp = c.id;
+            }
+        }
+        if (id_temp === "mobile-inter1") buttonid_temp = "mobile-buttoninter1";
+        else if (id_temp === "mobile-inter2") buttonid_temp = "mobile-buttoninter2";
+        else if (id_temp === "mobile-inter3") buttonid_temp = "mobile-buttoninter3";
+        var activeInter = document.getElementById(id);
+        if (activeInter.style.display === "none") {
+            var previousInter = document.getElementById(id_temp);
+            previousInter.style.display = "none";
+            activeInter.style.display = "block";
+        }
+    }
+
+
+</script>
+</body>
+</html>

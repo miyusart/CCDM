@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edição 2020</title>
+    <link rel="shortcut icon" href="images/icon.ico">
+    <script>
+        var totalCount = 2;
+
+        function ChangeIt() {
+            var num = Math.ceil(Math.random() * totalCount);
+            if (num === 1) {
+                var element = document.createElement("link");
+                element.setAttribute("rel", "stylesheet");
+                element.setAttribute("type", "text/css");
+                element.setAttribute("href", "css/white.css");
+                document.getElementsByTagName("head")[0].appendChild(element);
+            } else if (num === 2) {
+                var element1 = document.createElement("link");
+                element1.setAttribute("rel", "stylesheet");
+                element1.setAttribute("type", "text/css");
+                element1.setAttribute("href", "css/black.css");
+                document.getElementsByTagName("head")[0].appendChild(element1);
+            }
+        }
+
+        ChangeIt();
+    </script>
+</head>
+
+
+<body onload="showLoader()">
+
+<div id="loader">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<div id="page" class="animation-page">
+    <header>
+        <a href="homepage.html">CC-D+M</a>
+        <nav id="nav-web">
+            <ul>
+                <li><a href="edicao2020.html">Edição 2020</a></li>
+                <li><a href="intervinientes.html">Intervinientes</a></li>
+                <li><a href="locais.html">Locais</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <nav id="nav-mobile" class="dropdown">
+            <div id="nav-mobile-icon">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div id="dropdown-content">
+                <ul>
+                    <li><a href="edicao2020.html">Edição 2020</a></li>
+                    <li><a href="intervinientes.html">Intervinientes</a></li>
+                    <li><a href="locais.html">Locais</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="edition">
+        <div id="poster">
+            <video class="web-video" width="1200" height="500" autoplay loop>
+                <source src="images/poster-web.mp4" type="video/mp4">
+            </video>
+            <video class="responsive-video" width="1200" height="500" autoplay loop>
+                <source src="images/poster-responsive-geral.mp4" type="video/mp4">
+            </video>
+        </div>
+        <h1>edição 2020</h1>
+        <div class="main-container">
+
+            <div class="text-container">
+                <p>Ciclo anual de palestras realizado no âmbito dos cursos de Design e Multimédia da FCTUC -
+                    Faculdade
+                    de
+                    Ciências e Tecnologia da Universidade de Coimbra.</p>
+                <p>Quintas 2, 9 e 23 de Abril de 2020, pelas 14h, no Museu da Ciência da Universidade de
+                    Coimbra.</p>
+                <p>O "Ciclo de Conversas Design+Multimédia" é um ciclo de palestras que se irá realizar durante o
+                    mês de
+                    Abril
+                    tendo como convidados profissionais ligados ao Design e a outras áreas criativas adjacentes.</p>
+                <p>O ciclo encontra-se repartido em quatro sessões, sendo cada uma delas destinada a dois convidados
+                    distintos
+                    que poderão ser individuais ou colectivos. A intenção é que diferentes profissionais mostrem um
+                    pouco do
+                    seu
+                    trabalho e partilhem a sua experiência profissional com o público em geral, uma vez que o evento
+                    é
+                    de
+                    entrada livre. A duração prevista de cada sessão é de duas horas.</p>
+                <p>Este ano terá lugar a sexta edição deste evento anual organizado pelos Departamentos de
+                    Arquitectura
+                    e de
+                    Engenharia Informática da FCTUC – Faculdade de Ciências e Tecnologia da Universidade de
+                    Coimbra.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="icons-black">
+            <a class="facebook-icon" href="#">
+                <img src="images/facebook-icon-black.png" alt="facebook-icon" height="40" width="40"/>
+            </a>
+            <a class="instagram-icon" href="#">
+                <img src="images/instagram-icon-black.png" alt="instagram-icon" height="41" width="41"/>
+            </a>
+        </div>
+        <div id="icons-white">
+            <a class="facebook-icon" href="#">
+                <img src="images/facebook-icon-white.png" alt="instagram-icon" height="40" width="40"/>
+            </a>
+            <a class="instagram-icon" href="#">
+                <img src="images/instagram-icon-white.png" alt="instagram-icon" height="41" width="41"/>
+            </a>
+        </div>
+    </footer>
+</div>
+
+
+<script>
+
+    let myVar;
+
+    if (sessionStorage.getItem("first_load")) {
+        console.log('User has not finished session');
+        showPage();
+    } else {
+        showLoader();
+        sessionStorage.setItem("first_load", true);
+    }
+
+    function showPage() {
+        let loader = document.getElementById("loader");
+        let page = document.getElementById("page");
+        loader.style.display = "none";
+        page.style.display = "block";
+    }
+
+    function showLoader() {
+        myVar = setTimeout(showPage, 3000);
+    }
+</script>
+</body>
+</html>

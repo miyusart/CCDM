@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+@font-face {
+    font-family: 'cc-dmregular';
+    /*src: url('https://student.dei.uc.pt/~mcmartins/projeto_1/font_ccdm/CCDM.ttf') format('ttf'),
+    url('https://student.dei.uc.pt/~mcmartins/projeto_1/font_ccdm/ccdm-webfont.woff2') format('woff2'),
+    url('https://student.dei.uc.pt/~mcmartins/projeto_1/font_ccdm/ccdm-webfont.woff') format('woff');
+    */
+    src: url(../font_ccdm/CCDM.ttf) format('ttf'),
+    url(../font_ccdm/ccdm-webfont.woff) format('woff'),
+    url(../font_ccdm/ccdm-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+main {
+    font-family: 'cc-dmregular';
+    color: rgb(15,15,15);
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.square {
+    background-color: rgb(15, 15, 15);
+    height: 100px;
+}
+
+#square-2, #square-1 {
+    width: 100px;
+}
+
+#square-3 {
+    width: 200px;
+}
+
+#square-4 {
+    float: right;
+    width: 300px;
+}
+
+#square-5 {
+    float: right;
+    width: 100px;
+}
+
+.square .bottom {
+    bottom:0;
+}
+
+#contacts .main-container {
+    margin: 40px 7%;
+}
+
+header {
+    background-color: rgb(15, 15, 15);
+    font-family: 'cc-dmregular';
+    text-transform: uppercase;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+header a {
+    text-decoration: none;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 120%;
+}
+
+#nav-mobile {
+    display: none;
+}
+
+#nav-web {
+    display: block;
+}
+
+#nav-web ul {
+    padding: 0;
+}
+
+#nav-web li {
+    padding: 30px 0;
+    display: inline-block;
+    position: relative;
+    margin-left: 60px;
+}
+
+#nav-web a::before {
+    content: '';
+    display: block;
+    height: 8px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    width: 0;
+    transition: all ease-in-out 0.5s;
+}
+
+#nav-web a:hover::before {
+    width: 100%;
+}
+
+
+/*Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #nav-web li {
+        margin-left: 30px;
+    }
+
+    header a {
+        font-size: 110%;
+    }
+}
+
+
+/*Small Desktop*/
+@media screen and (max-width: 767px) {
+    #nav-web {
+        display: none;
+    }
+
+    #nav-mobile {
+        display: flex;
+        width: 28px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        float: left;
+    }
+
+    #nav-mobile-icon ul {
+        display: grid;
+        grid-template-columns: auto auto;
+        list-style-type: none;
+        grid-gap: 2px;
+        margin: 0;
+        padding: 0;
+        transition: all ease-in-out 0.2s;
+        cursor: pointer;
+    }
+
+    #nav-mobile-icon ul li {
+        width: 10px;
+        height: 10px;
+        background-color: whitesmoke;
+        transition: all ease-in-out 0.2s;
+    }
+
+    #dropdown-content {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: rgb(15, 15, 15);
+        padding: 20px 5%;
+        height: 0;
+        transition: all ease-in-out 0.5s;
+    }
+
+    #dropdown-content ul {
+        padding: 0;
+    }
+
+    #dropdown-content li {
+        margin-bottom: 20px;
+    }
+
+    #dropdown-content li:nth-child(4) {
+        margin-bottom: 0;
+    }
+
+    #nav-mobile-icon:hover ul {
+        grid-gap: 4px;
+    }
+
+    #nav-mobile-icon:hover ul li {
+        width: 12px;
+        height: 12px;
+    }
+
+    #nav-mobile:hover #dropdown-content {
+        display: flex;
+        height: 200px;
+    }
+
+    #nav-mobile a:hover {
+        color: whitesmoke;
+        transition: all ease-in-out 0.5s;
+    }
+
+    #nav-mobile a:hover {
+        color: rgb(105, 105, 105);
+    }
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(15, 15, 15);
+    position: relative;
+    bottom: 0;
+}
+
+#icons-black {
+    display: none;
+}
+
+#icons-white {
+    display: flex;
+}
+
+#icons-white .facebook-icon {
+    margin-right: 10px;
+}

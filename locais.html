@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Locais</title>
+    <link rel="shortcut icon" href="images/icon.ico">
+    <script>
+        var totalCount = 2;
+
+        function ChangeIt() {
+            var num = Math.ceil(Math.random() * totalCount);
+            if (num === 1) {
+                var element = document.createElement("link");
+                element.setAttribute("rel", "stylesheet");
+                element.setAttribute("type", "text/css");
+                element.setAttribute("href", "css/white.css");
+                document.getElementsByTagName("head")[0].appendChild(element);
+            } else if (num === 2) {
+                var element1 = document.createElement("link");
+                element1.setAttribute("rel", "stylesheet");
+                element1.setAttribute("type", "text/css");
+                element1.setAttribute("href", "css/black.css");
+                document.getElementsByTagName("head")[0].appendChild(element1);
+            }
+        }
+
+        ChangeIt();
+    </script>
+</head>
+
+<body onload="showLoader()">
+
+<div id="loader">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<div id="page" class="animation-page">
+    <header>
+        <a href="homepage.html">CC-D+M</a>
+        <nav id="nav-web">
+            <ul>
+                <li><a href="edicao2020.html">Edição 2020</a></li>
+                <li><a href="intervinientes.html">Intervinientes</a></li>
+                <li><a href="locais.html">Locais</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <nav id="nav-mobile" class="dropdown">
+            <div id="nav-mobile-icon">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div id="dropdown-content">
+                <ul>
+                    <li><a href="edicao2020.html">Edição 2020</a></li>
+                    <li><a href="intervinientes.html">Intervinientes</a></li>
+                    <li><a href="locais.html">Locais</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="locais">
+        <h1>locais</h1>
+        <div class="web-main-container">
+            <div class="web-container" id="web-local1" style="display: flex;">
+                <div class="slider-text" id="slider-text1">
+                    <h2>dei</h2>
+                    <ul>
+                        <li>Departamento de Engenharia Informática</li>
+                        <li>Universidade de Coimbra</li>
+                        <li>Pólo II Pinhal de Marrocos</li>
+                        <li>3030-290 Coimbra</li>
+                    </ul>
+                </div>
+                <img class="slider-image" id="slider-image1" src="images/dei.jpg" height="500" width="500"/>
+            </div>
+
+            <div class="web-container" id="web-local2" style="display: none;">
+                <div class="slider-text">
+                    <h2>darq</h2>
+                    <ul>
+                        <li>Departamento de Arquitetura</li>
+                        <li>Universidade de Coimbra</li>
+                        <li>R. Colégio Novo</li>
+                        <li>3000-143 Coimbra</li>
+                    </ul>
+                </div>
+                <img class="slider-image" src="images/darq.jpg" height="411" width="617"/>
+            </div>
+
+            <div class="web-container" id="web-local3" style="display: none;">
+                <div class="slider-text">
+                    <h2>laboratório chimico</h2>
+                    <ul>
+                        <li>Museu da Ciência</li>
+                        <li>Laboratório Chimico</li>
+                        <li>Largo Marquês de Pombal</li>
+                        <li>3030-272 Coimbra</li>
+                    </ul>
+                </div>
+                <img class="slider-image" src="images/chimico.jpg" height="411" width="617"/>
+            </div>
+            <div class="buttons-container">
+                <button class="button" id="web-buttonlocal1"
+                        onclick="webbuttonslocais('web-local1', 'web-buttonlocal1');">
+                    dei
+                </button>
+                <button class="button" id="web-buttonlocal2"
+                        onclick="webbuttonslocais('web-local2', 'web-buttonlocal2');"> darq
+                </button>
+                <button class="button" id="web-buttonlocal3"
+                        onclick="webbuttonslocais('web-local3', 'web-buttonlocal3');"> laboratório
+                    chimico
+                </button>
+            </div>
+        </div>
+
+
+        <div class="mobile-main-container">
+            <div class="mobile-container" id="mobile-local1" style="display: block;">
+                <div class="image-container">
+                    <img src="images/dei.jpg" height="500" width="500"/>
+                </div>
+                <div class="text-container">
+                    <h2>dei</h2>
+                    <ul>
+                        <li>Departamento de Engenharia Informática</li>
+                        <li>Universidade de Coimbra</li>
+                        <li>Pólo II Pinhal de Marrocos</li>
+                        <li>3030-290 Coimbra</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mobile-container" id="mobile-local2" style="display: none;">
+                <div class="image-container">
+                    <img src="images/darq.jpg" height="411" width="617"/>
+                </div>
+                <div class="text-container">
+                    <h2>darq</h2>
+                    <ul>
+                        <li>Departamento de Arquitetura</li>
+                        <li>Universidade de Coimbra</li>
+                        <li>R. Colégio Novo</li>
+                        <li>3000-143 Coimbra</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mobile-container" id="mobile-local3" style="display: none;">
+                <div class="image-container">
+                    <img src="images/chimico.jpg" height="411" width="617"/>
+                </div>
+                <div class="text-container">
+                    <h2>laboratório chimico</h2>
+                    <ul>
+                        <li>Museu da Ciência</li>
+                        <li>Laboratório Chimico</li>
+                        <li>Largo Marquês de Pombal</li>
+                        <li>3030-272 Coimbra</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button class="button" id="mobile-buttonlocal1"
+                        onclick="mobilebuttonslocais('mobile-local1', 'mobile-buttonlocal1');">
+                    dei
+                </button>
+                <button class="button" id="mobile-buttonlocal2"
+                        onclick="mobilebuttonslocais('mobile-local2', 'mobile-buttonlocal2');"> darq
+                </button>
+                <button class="button" id="mobile-buttonlocal3"
+                        onclick="mobilebuttonslocais('mobile-local3', 'mobile-buttonlocal3');"> laboratório
+                    chimico
+                </button>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div id="icons-black">
+            <a class="facebook-icon" href="#">
+                <img src="images/facebook-icon-black.png" alt="facebook-icon" height="40" width="40"/>
+            </a>
+            <a class="instagram-icon" href="#">
+                <img src="images/instagram-icon-black.png" alt="instagram-icon" height="41" width="41"/>
+            </a>
+        </div>
+        <div id="icons-white">
+            <a class="facebook-icon" href="#">
+                <img src="images/facebook-icon-white.png" alt="instagram-icon" height="40" width="40"/>
+            </a>
+            <a class="instagram-icon" href="#">
+                <img src="images/instagram-icon-white.png" alt="instagram-icon" height="41" width="41"/>
+            </a>
+        </div>
+    </footer>
+</div>
+
+<script>
+
+    let myVar;
+
+    if (sessionStorage.getItem("first_load")) {
+        console.log('User has not finished session');
+        showPage();
+    } else {
+        showLoader();
+        sessionStorage.setItem("first_load", true);
+    }
+
+    function showPage() {
+        let loader = document.getElementById("loader");
+        let page = document.getElementById("page");
+        loader.style.display = "none";
+        page.style.display = "block";
+    }
+
+    function showLoader() {
+        myVar = setTimeout(showPage, 3000);
+    }
+
+
+    function webbuttonslocais(id, buttonid) {
+        var id_temp;
+        var buttonid_temp;
+        for (var i = 0; i < 3; i++) {
+            var c = document.getElementsByClassName("web-container")[i];
+            if (c.style.display === "flex") {
+                id_temp = c.id;
+            }
+        }
+        if (id_temp === "web-local1") buttonid_temp = "web-buttonlocal1";
+        else if (id_temp === "web-local2") buttonid_temp = "web-buttonlocal2";
+        else if (id_temp === "web-local3") buttonid_temp = "web-buttonlocal3";
+        var activeInter = document.getElementById(id);
+        if (activeInter.style.display === "none") {
+            var previousInter = document.getElementById(id_temp);
+            previousInter.style.display = "none";
+            activeInter.style.display = "flex";
+        }
+    }
+
+
+    function mobilebuttonslocais(id, buttonid) {
+        var id_temp;
+        var buttonid_temp;
+        for (var i = 0; i < 3; i++) {
+            var c = document.getElementsByClassName("mobile-container")[i];
+            if (c.style.display === "block") {
+                id_temp = c.id;
+            }
+        }
+        if (id_temp === "mobile-local1") buttonid_temp = "mobile-buttonlocal1";
+        else if (id_temp === "mobile-local2") buttonid_temp = "mobile-buttonlocal2";
+        else if (id_temp === "mobile-local3") buttonid_temp = "mobile-buttonlocal3";
+        var activeInter = document.getElementById(id);
+        if (activeInter.style.display === "none") {
+            var previousInter = document.getElementById(id_temp);
+            previousInter.style.display = "none";
+            activeInter.style.display = "block";
+        }
+    }
+</script>
+</body>

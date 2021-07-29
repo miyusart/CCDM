@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contactos</title>
+    <link rel="shortcut icon" href="images/icon.ico">
+    <script>
+        var totalCount = 2;
+
+        function ChangeIt() {
+            var num = Math.ceil(Math.random() * totalCount);
+            if (num === 1) {
+                var element = document.createElement("link");
+                element.setAttribute("rel", "stylesheet");
+                element.setAttribute("type", "text/css");
+                element.setAttribute("href", "css/white.css");
+                document.getElementsByTagName("head")[0].appendChild(element);
+            } else if (num === 2) {
+                var element1 = document.createElement("link");
+                element1.setAttribute("rel", "stylesheet");
+                element1.setAttribute("type", "text/css");
+                element1.setAttribute("href", "css/black.css");
+                document.getElementsByTagName("head")[0].appendChild(element1);
+            }
+        }
+
+        ChangeIt();
+    </script>
+</head>
+
+<body onload="showLoader()">
+
+<div id="loader">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<div id="page" class="animation-page">
+    <header>
+        <a href="homepage.html">CC-D+M</a>
+        <nav id="nav-web">
+            <ul>
+                <li><a href="edicao2020.html">Edição 2020</a></li>
+                <li><a href="intervinientes.html">Intervinientes</a></li>
+                <li><a href="locais.html">Locais</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <nav id="nav-mobile" class="dropdown">
+            <div id="nav-mobile-icon">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div id="dropdown-content">
+                <ul>
+                    <li><a href="edicao2020.html">Edição 2020</a></li>
+                    <li><a href="intervinientes.html">Intervinientes</a></li>
+                    <li><a href="locais.html">Locais</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contacts" style="padding: 0; min-height: calc(100vh - 160px);">
+
+        <div class="square square-1"></div>
+        <div class="square square-2" style="right: 0;"></div>
+        <div class="square square-1" style="right: 0; top: 180px;"></div>
+
+        <div class="main-container">
+            <h1 style="margin: 0;">Contactos</h1>
+            <div class="text-container">
+                <ul>
+                    <li>Nuno Coelho</li>
+                    <li>Professor Auxiliar do DEI-FCTUC</li>
+                    <li>ncoelho@dei.uc.pt</li>
+                    <li>962682757</li>
+                </ul>
+            </div>
+        </div>
+
+            <div class="square square-1" style="right: 0; bottom: 80px;"></div>
+            <div class="square square-1" style="bottom: 180px;"></div>
+            <div class="square square-2" style="bottom: 80px;"></div>
+
+    </main>
+
+    <footer>
+        <div id="icons-black">
+            <a class="facebook-icon" href="#">
+                <img src="images/facebook-icon-black.png" alt="facebook-icon" height="40" width="40"/>
+            </a>
+            <a class="instagram-icon" href="#">
+                <img src="images/instagram-icon-black.png" alt="instagram-icon" height="41" width="41"/>
+            </a>
+        </div>
+        <div id="icons-white">
+            <a class="facebook-icon" href="#">
+                <img src="images/facebook-icon-white.png" alt="instagram-icon" height="40" width="40"/>
+            </a>
+            <a class="instagram-icon" href="#">
+                <img src="images/instagram-icon-white.png" alt="instagram-icon" height="41" width="41"/>
+            </a>
+        </div>
+    </footer>
+</div>
+
+<script>
+
+    let myVar;
+
+    if (sessionStorage.getItem("first_load")) {
+        console.log('User has not finished session');
+        showPage();
+    } else {
+        showLoader();
+        sessionStorage.setItem("first_load", true);
+    }
+
+    function showPage() {
+        let loader = document.getElementById("loader");
+        let page = document.getElementById("page");
+        loader.style.display = "none";
+        page.style.display = "block";
+    }
+
+    function showLoader() {
+        myVar = setTimeout(showPage, 3000);
+    }
+</script>
+
+</body>
+
